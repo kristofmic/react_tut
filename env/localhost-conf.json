@@ -1,0 +1,41 @@
+{
+  "port" : 8064,
+
+  "base_url" : "alerts.voxa.localhost.com",
+
+  "api_url" : "http://api.zero.voxa.localhost.com",
+
+
+  "mongo" : {
+    "default_db" : "zero-web-angular",
+    "host" : "localhost",
+    "opts" : {
+      "auto_reconnect" : true,
+      "poolSize" : 5
+    }
+  },
+
+  "web": {
+    "voxaAccessToken": "V0xyM4!13r"
+  },
+
+  "google_apps": {
+    "client_id" : "412439424878-bm8fcgq1gd2sbbe8c98lm374eq0d7brj.apps.googleusercontent.com",
+    "client_secret": "XkkbL_CVlY_JHfOnkpFMLLQ3",
+    "base_url": "https://accounts.google.com/",
+    "authorize_path" : "o/oauth2/auth",
+    "access_token_path" : "o/oauth2/token",
+    "redirect_url" : "https://alerts.voxa.localhost.com/google/oauth2callback",
+    "user_info_url": "https://www.googleapis.com/plus/v1/people/me"
+  },
+
+  "voxa": {
+    "client_id" : "545906ed1eb30445d80fb642",
+    "client_secret": "alerts-web-secret",
+    "base_url": "https://accounts.voxa.localhost.com/",
+    "authorize_path" : "oauth2/authorize",
+    "access_token_path" : "oauth2/token",
+    "logout_path": "logout",
+    "redirect_url" : "https://alerts.voxa.localhost.com/voxa/oauth2/callback"
+  }
+}

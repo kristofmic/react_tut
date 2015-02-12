@@ -1,0 +1,1 @@
+require('./comment_box.react');
