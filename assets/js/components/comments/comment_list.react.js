@@ -11,17 +11,17 @@ module.exports = CommentList;
 
 function render() {
   var
-    comments;
-
-  comments = this.props.data.map(function(c) {
-    return (
-      React.createElement(Comment, {author: c.author}, c.text)
-    );
-  });
+    comments = this.props.data.map(renderComment);
 
   return (
     React.createElement("div", {className: "comment-list"}, 
       comments
     )
+  );
+}
+
+function renderComment(c) {
+  return (
+    React.createElement(Comment, {author: c.author}, c.text)
   );
 }

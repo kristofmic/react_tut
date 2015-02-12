@@ -5,6 +5,7 @@ var
   favicon = require('serve-favicon'),
   compression = require('compression'),
   cookieParser = require('cookie-parser'),
+  bodyParser = require('body-parser'),
   _ = require('lodash'),
 
   ENV = process.env.NODE_ENV || 'localhost',
@@ -25,6 +26,8 @@ app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.ico')));
 app.use(compression());
 
 app.use(cookieParser());
+
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(timeout(120000));
