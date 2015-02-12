@@ -49,7 +49,7 @@ function getInitialState() {
 
 function componentDidMount() {
   this.getComments();
-  //setInterval(getThisComments, this.props.pollInterval);
+  setInterval(getComments.bind(this), this.props.pollInterval);
 }
 
 function render() {
@@ -94,6 +94,11 @@ function handleResponse(res) {
 }
 
 function handleCommentSubmit(data) {
+  var
+    comments = this.state.data.concat([data]);
+
+  this.setState({ data: comments });
+
   this.addComment(data);
 }
 
